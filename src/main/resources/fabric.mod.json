@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "echoes_of_the_past",
+  "version": "${version}",
+  "name": "EchoesOfThePast",
+  "description": "A mod that adds a few new items that can be crafted using echo shards. ",
+  "authors": [
+    "CyborgPigeon"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/echoes_of_the_past/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.hyper_pigeon.echoes_of_the_past.client.EchoesOfThePastClient"
+    ],
+    "main": [
+      "net.hyper_pigeon.echoes_of_the_past.EchoesOfThePast"
+    ]
+  },
+  "mixins": [
+    "echoes_of_the_past.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric": "*",
+    "minecraft": "1.19"
+  }
+}

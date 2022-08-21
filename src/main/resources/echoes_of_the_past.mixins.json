@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.hyper_pigeon.echoes_of_the_past.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "EchoClockInteractionMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
