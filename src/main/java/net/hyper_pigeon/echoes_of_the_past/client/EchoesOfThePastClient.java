@@ -19,8 +19,7 @@ public class EchoesOfThePastClient implements ClientModInitializer {
         ModelPredicateProviderRegistry.register(EchoesOfThePast.ECHO_CLOCK_ITEM,
                 new Identifier("echoes_of_the_past","is_alive"),
                 (stack, world, entity, seed) -> {
-                System.out.println("check");
-                return stack.getOrCreateNbt().getBoolean("is_alive") ? 0f : 1f;
+                return !stack.getOrCreateNbt().contains("is_alive") ? 0f : (stack.getOrCreateNbt().getBoolean("is_alive") ? 0f : 1f);
                 });
 
     }
