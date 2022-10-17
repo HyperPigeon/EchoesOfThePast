@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtList;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -70,6 +71,13 @@ public class EchoClockItem extends Item {
             stack.getOrCreateNbt().putUuid("UUID", entity.getUuid());
             stack.getOrCreateNbt().putBoolean("is_alive", true);
             stack.getOrCreateNbt().putFloat("position",0);
+
+            if(stack.getOrCreateNbt().contains("Items")){
+                NbtList nbtList = new NbtList();
+                stack.getOrCreateNbt().put("Items",nbtList);
+            }
+
+
 
             player.setStackInHand(hand,stack);
             return ActionResult.SUCCESS;
