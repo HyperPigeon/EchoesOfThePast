@@ -34,7 +34,7 @@ public class EchoClockItem extends Item {
     public ActionResult useOnBlock(ItemUsageContext context)
     {
         ItemStack stack = context.getStack();
-        if(!context.getWorld().isClient)
+        if(!context.getWorld().isClient && stack.getDamage() < 8)
         {
             NbtCompound nbtCompound = stack.getOrCreateNbt();
 
@@ -52,7 +52,6 @@ public class EchoClockItem extends Item {
                 stack.setDamage(stack.getDamage()+1);
                 if(stack.getDamage() >= 8) {
                     context.getPlayer().sendToolBreakStatus(context.getHand());
-                    stack.decrement(1);
                 }
 
                 return ActionResult.SUCCESS;
@@ -128,6 +127,9 @@ public class EchoClockItem extends Item {
             UUID uuid = stack.getOrCreateNbt().getUuid("UUID");
             stack.getOrCreateNbt().putBoolean("is_alive", ((ServerWorld)(world)).getEntity(uuid) != null);
         }
+
+
+
     }
 
 

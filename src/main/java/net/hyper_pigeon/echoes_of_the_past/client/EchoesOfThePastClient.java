@@ -22,5 +22,11 @@ public class EchoesOfThePastClient implements ClientModInitializer {
                 return !stack.getOrCreateNbt().contains("is_alive") ? 0f : (stack.getOrCreateNbt().getBoolean("is_alive") ? 0f : 1f);
                 });
 
+        ModelPredicateProviderRegistry.register(EchoesOfThePast.ECHO_CLOCK_ITEM,
+                new Identifier("echoes_of_the_past","broken"),
+                (stack, world, entity, seed) -> {
+                    return stack.getDamage() < 8 ? 0f : 1f;
+                });
+
     }
 }

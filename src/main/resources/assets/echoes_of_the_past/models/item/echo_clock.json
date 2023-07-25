@@ -49,6 +49,7 @@
     { "predicate": { "echoes_of_the_past:position": 0.05, "echoes_of_the_past:is_alive": 1 }, "model": "echoes_of_the_past:item/soul_filled_echo_clock5" },
     { "predicate": { "echoes_of_the_past:position": 0.06, "echoes_of_the_past:is_alive": 1 }, "model": "echoes_of_the_past:item/soul_filled_echo_clock6" },
     { "predicate": { "echoes_of_the_past:position": 0.07, "echoes_of_the_past:is_alive": 1 }, "model": "echoes_of_the_past:item/soul_filled_echo_clock7" },
-    { "predicate": { "echoes_of_the_past:position": 0.08, "echoes_of_the_past:is_alive": 1 }, "model": "echoes_of_the_past:item/soul_filled_echo_clock8" }
+    { "predicate": { "echoes_of_the_past:position": 0.08, "echoes_of_the_past:is_alive": 1 }, "model": "echoes_of_the_past:item/soul_filled_echo_clock8" },
+    { "predicate": {"echoes_of_the_past:broken": 1 }, "model": "echoes_of_the_past:item/echo_clock_broken" }
   ]
 }
